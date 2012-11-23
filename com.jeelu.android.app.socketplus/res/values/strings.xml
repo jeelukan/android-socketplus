@@ -1,0 +1,9 @@
+<resources>
+
+    <string name="app_name">SocketPlus</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_socket_client">Socket Client</string>
+
+</resources>
