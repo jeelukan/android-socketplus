@@ -7,5 +7,9 @@
     <string name="title_activity_socket_client">Socket Client</string>
     <string name="title_activity_home">Welcome Socket+</string>
     <drawable name="mainColor">#22FF55</drawable>
+    <drawable name="whiteColor">#EEEEEE</drawable>
+    <string name="StartServerButtonText">启动Server</string>
+    <string name="StartClientButtonText">启动Client</string>
+    <string name="InfoLabel">数据相关信息</string>
 
 </resources>

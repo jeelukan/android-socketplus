@@ -18,6 +18,7 @@ public class HomeActivity extends Activity
 		final Resources resources = getResources();
 		final Window window = getWindow();
 		final Drawable drawable = resources.getDrawable(R.drawable.mainColor);
+		// 设置背景色为本应用的主色调
 		window.setBackgroundDrawable(drawable);
 	}
 
