@@ -14,14 +14,17 @@
         <Button
             android:id="@+id/startServerButton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
             android:text="@string/StartServerButtonText" />
 
         <Button
             android:id="@+id/startClientbutton"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:layout_weight="1"
             android:text="@string/StartClientButtonText" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -34,25 +37,21 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:layout_margin="5"
             android:text="Client发送正常" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5"
             android:text="Server发送正常" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5"
             android:text="协议设置45条" />
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5"
             android:text="发送字节数231,32434,3234" />
     </LinearLayout>
 

@@ -1,5 +1,10 @@
 <resources>
 
     <style name="AppTheme" parent="android:Theme.Light" />
+    <!-- PopupWindow窗口淡入淡出动画 -->
+    <style name="AnimationFade">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
 
 </resources>
