@@ -1,10 +1,17 @@
 <resources>
 
     <style name="AppTheme" parent="android:Theme.Light" />
-    <!-- PopupWindow窗口淡入淡出动画 -->
-    <style name="AnimationFade">
-        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
-        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    <!-- 无标题栏 -->
+    <style name="noWindowTitleBar">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- 创建Server前提示用户的Dialog的样式 -->
+    <style name="build_server_dialog" parent="@android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@drawable/build_server_dialog_bg</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>

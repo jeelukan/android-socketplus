@@ -21,7 +21,7 @@ public class WelcomeActivity extends Activity
 
 		// 停留4秒钟，以保证相关的视觉信息的传递。4秒钟后跳转到Home页。
 		final Handler x = new Handler();
-		x.postDelayed(new Splashhandler(), 4000);
+		x.postDelayed(new Splashhandler(), 1000);
 	}
 
 	/**
