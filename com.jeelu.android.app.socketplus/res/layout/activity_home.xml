@@ -1,58 +1,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/HomeLinear"
+    android:id="@+id/homeLinear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainColor"
     android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/TopMainFuncLinear"
+        android:id="@+id/topMainFunctionLinear"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/startServerButton"
+            android:id="@+id/buildServerButton"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:text="@string/StartServerButtonText" />
+            android:text="@string/startClientButtonText" />
 
         <Button
-            android:id="@+id/startClientbutton"
+            android:id="@+id/buildClientButton"
             android:layout_width="wrap_content"
             android:layout_height="150dp"
             android:layout_weight="1"
-            android:text="@string/StartClientButtonText" />
+            android:text="@string/startClientButtonText" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/AppDataInfoLinear"
+        android:id="@+id/datainfoLinear"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/whiteColor"
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/clientDatainfoTextview"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:text="Client发送正常" />
+            android:text="@string/demoText" />
 
         <TextView
+            android:id="@+id/serverDatainfoTextview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Server发送正常" />
+            android:text="@string/demoText" />
 
         <TextView
+            android:id="@+id/protocolSettingTextview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="协议设置45条" />
+            android:text="@string/demoText" />
 
         <TextView
+            android:id="@+id/bytesStatisticsTextview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="发送字节数231,32434,3234" />
+            android:text="@string/demoText" />
+
     </LinearLayout>
 
 </LinearLayout>

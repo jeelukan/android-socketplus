@@ -3,6 +3,7 @@ package com.jeelu.android.app.socketplus;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -29,22 +30,8 @@ public class HomeActivity extends Activity
 		// 设置背景色为本应用的主色调
 		window.setBackgroundDrawable(drawable);
 
-		final Button btn = (Button) findViewById(R.id.startServerButton);
-		btn.setOnClickListener(new StartServierListener());
-	}
-
-	class StartServierListener implements OnClickListener
-	{
-
-		public void onClick(final View v)
-		{
-			final Context cx = HomeActivity.this;
-			if (v.getId() == R.id.startServerButton)
-			{
-				PopupWindow popupWin = makePopupWindow(cx);
-				popupWin.showAtLocation(v, Gravity.RIGHT | Gravity.BOTTOM, 10, 10);
-			}
-		}
+		final Button btn = (Button) findViewById(R.id.buildServerButton);
+		btn.setOnClickListener(new BuildServierListener());
 	}
 
 	/**
@@ -55,19 +42,20 @@ public class HomeActivity extends Activity
 	 */
 	private PopupWindow makePopupWindow(final Context cx)
 	{
+		final Resources res = cx.getResources();
 		final PopupWindow window = new PopupWindow(cx);
+		window.setBackgroundDrawable(new ColorDrawable(res.getColor(R.drawable.whiteColor)));
+
 		final TextView textView = new TextView(cx);
 		textView.setGravity(Gravity.CENTER);
-		final Resources res = cx.getResources();
-		// contentView.setBackgroundColor(R.color.page_window_bgcolor);
-		// window.setBackgroundDrawable(new
-		// ColorDrawable(res.getColor(R.color.page_window_bgcolor)));
+		textView.setBackgroundColor(R.drawable.whiteColor);
 		textView.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+		textView.setText("创建Server么？");
 		// 设置PopupWindow显示和隐藏时的动画
 		window.setAnimationStyle(R.style.AnimationFade);
 		// 设置PopupWindow的大小（宽度和高度）
-		window.setWidth(res.getDimensionPixelSize(R.dimen.page_window_width));
-		window.setHeight(res.getDimensionPixelSize(R.dimen.page_window_height));
+		window.setWidth(res.getDimensionPixelSize(R.dimen.buildServerPopwinWidth));
+		window.setHeight(res.getDimensionPixelSize(R.dimen.buildServerPopwinHeight));
 		// 设置PopupWindow的内容view
 		window.setContentView(textView);
 		// 设置PopupWindow外部区域是否可触摸
@@ -80,5 +68,24 @@ public class HomeActivity extends Activity
 	{
 		getMenuInflater().inflate(R.menu.activity_home, menu);
 		return true;
+	}
+
+	/**
+	 * 当点击“创建Server”时
+	 * 
+	 * @author jeelukan@gmail.com
+	 * 
+	 */
+	class BuildServierListener implements OnClickListener
+	{
+		public void onClick(final View v)
+		{
+			Context cx = HomeActivity.this;
+			if (v.getId() == R.id.buildServerButton)
+			{
+				PopupWindow popupWin = makePopupWindow(cx);
+				popupWin.showAtLocation(v, Gravity.BOTTOM | Gravity.LEFT, 0, 0);
+			}
+		}
 	}
 }
