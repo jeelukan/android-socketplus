@@ -27,12 +27,12 @@ public class ServerBuilderDialog extends Dialog
 	protected void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		_TitleTextView = (TextView) findViewById(R.id.buildServerTitleTextview);
 	}
 
 	@Override
 	public void setTitle(final CharSequence title)
 	{
+		_TitleTextView = (TextView) findViewById(R.id.buildServerTitleTextview);
 		if (_TitleTextView != null)
 			_TitleTextView.setText(title);
 	}

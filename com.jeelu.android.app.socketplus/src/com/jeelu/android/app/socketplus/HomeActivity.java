@@ -51,7 +51,7 @@ public class HomeActivity extends Activity
 			if (v.getId() == R.id.buildServerButton)
 			{
 				Dialog dialog = new ServerBuilderDialog(HomeActivity.this);
-				dialog.setTitle("创建Socket Server");
+				dialog.setTitle("请填写Server相关参数:");
 				dialog.show();
 			}
 		}

@@ -13,5 +13,7 @@
     <dimen name="buildServerPopwinWidth">120dp</dimen>
     <dimen name="buildServerPopwinHeight">180dp</dimen>
     <string name="demoText">中国文字^%ABCD,{xyz}123#8211;987</string>
+    <string name="okTextButton">确定</string>
+    <string name="cancelTextButton">取消</string>
 
 </resources>
