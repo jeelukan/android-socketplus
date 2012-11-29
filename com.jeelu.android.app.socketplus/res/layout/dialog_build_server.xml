@@ -11,19 +11,39 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textSize="15sp" />
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_marginTop="5dip" />
-
-    <TextView
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="30dip"
-        android:layout_marginTop="10dip"
-        android:textColor="#000000" />
+        android:orientation="vertical" >
+        
+        <TwoLineListItem android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></TwoLineListItem>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="长连接" >
+
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保持心跳" >
+
+        </CheckBox>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="捕获异常" >
+
+        </CheckBox>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="fill_parent"
