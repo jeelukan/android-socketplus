@@ -2,6 +2,9 @@ package com.jeelu.android.app.socketplus;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnDismissListener;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -51,9 +54,18 @@ public class HomeActivity extends Activity
 			if (v.getId() == R.id.buildServerButton)
 			{
 				Dialog dialog = new ServerBuilderDialog(HomeActivity.this);
-				dialog.setTitle("请填写Server相关参数:");
+				dialog.setOnDismissListener(new CloseListener());
 				dialog.show();
 			}
+		}
+	}
+
+	class CloseListener implements OnDismissListener
+	{
+		public void onDismiss(final DialogInterface dialog)
+		{
+			startActivity(new Intent(getApplication(), SocketClientActivity.class));
+			finish();
 		}
 	}
 }

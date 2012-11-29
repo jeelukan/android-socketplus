@@ -15,5 +15,7 @@
     <string name="demoText">中国文字^%ABCD,{xyz}123#8211;987</string>
     <string name="okTextButton">确定</string>
     <string name="cancelTextButton">取消</string>
+    <string name="buildServerDialogTitle">请输入参数：</string>
+    <string name="buildServerDialogTitlePortLabelText">端口：</string>
 
 </resources>
