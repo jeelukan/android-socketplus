@@ -28,9 +28,9 @@ public class ServerBuilderDialog extends Dialog
 		// 取消自定义dialog的标题栏
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		this.setContentView(R.layout.dialog_build_server);
-		setNegativeButton("不喜欢", ocl);
-		setNeutralButton("一般般", ocl);
-		setPositiveButton("很喜欢", ocl);
+		// setNegativeButton("不喜欢", ocl);
+		// setNeutralButton("一般般", ocl);
+		// setPositiveButton("很喜欢", ocl);
 	}
 
 	// 对话框按钮点击事件监听器
@@ -41,13 +41,13 @@ public class ServerBuilderDialog extends Dialog
 			switch (which)
 			{
 				case DialogInterface.BUTTON_NEGATIVE:
-					Toast.makeText(ServerBuilderDialog.this, "我不喜欢他的电影。", Toast.LENGTH_LONG).show();
+					Toast.makeText((Context) dialog, "我不喜欢他的电影。", Toast.LENGTH_LONG).show();
 					break;
 				case DialogInterface.BUTTON_NEUTRAL:
-					Toast.makeText(MainHelloAlertDialog.this, "说不上喜欢不喜欢。", Toast.LENGTH_LONG).show();
+					Toast.makeText((Context) dialog, "说不上喜欢不喜欢。", Toast.LENGTH_LONG).show();
 					break;
 				case DialogInterface.BUTTON_POSITIVE:
-					Toast.makeText(MainHelloAlertDialog.this, "我很喜欢他的电影。", Toast.LENGTH_LONG).show();
+					Toast.makeText((Context) dialog, "我很喜欢他的电影。", Toast.LENGTH_LONG).show();
 					break;
 			}
 		}
