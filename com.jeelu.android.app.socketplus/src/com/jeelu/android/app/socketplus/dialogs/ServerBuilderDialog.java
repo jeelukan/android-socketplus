@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.jeelu.android.app.socketplus.R;
 
@@ -38,18 +37,18 @@ public class ServerBuilderDialog extends Dialog
 	{
 		public void onClick(final DialogInterface dialog, final int which)
 		{
-			switch (which)
-			{
-				case DialogInterface.BUTTON_NEGATIVE:
-					Toast.makeText((Context) dialog, "我不喜欢他的电影。", Toast.LENGTH_LONG).show();
-					break;
-				case DialogInterface.BUTTON_NEUTRAL:
-					Toast.makeText((Context) dialog, "说不上喜欢不喜欢。", Toast.LENGTH_LONG).show();
-					break;
-				case DialogInterface.BUTTON_POSITIVE:
-					Toast.makeText((Context) dialog, "我很喜欢他的电影。", Toast.LENGTH_LONG).show();
-					break;
-			}
+			// switch (which)
+			// {
+			// case DialogInterface.BUTTON_NEGATIVE:
+			// Toast.makeText((Context) dialog, "我不喜欢他的电影。", Toast.LENGTH_LONG).show();
+			// break;
+			// case DialogInterface.BUTTON_NEUTRAL:
+			// Toast.makeText((Context) dialog, "说不上喜欢不喜欢。", Toast.LENGTH_LONG).show();
+			// break;
+			// case DialogInterface.BUTTON_POSITIVE:
+			// Toast.makeText((Context) dialog, "我很喜欢他的电影。", Toast.LENGTH_LONG).show();
+			// break;
+			// }
 		}
 	};
 

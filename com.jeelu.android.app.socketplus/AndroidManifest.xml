@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jeelu.android.app.socketplus"
     android:versionCode="1"
@@ -12,7 +13,7 @@
         android:label="@string/app_name"
         android:theme="@style/noWindowTitleBar" >
         <activity
-            android:name=".WelcomeActivity"
+            android:name="com.jeelu.android.app.socketplus.WelcomeActivity"
             android:label="@string/title_activity_welcome" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SocketClientActivity"
+            android:name="com.jeelu.android.app.socketplus.SocketClientActivity"
             android:label="@string/title_activity_socket_client" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,13 +31,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name="com.jeelu.android.app.socketplus.HomeActivity"
             android:label="@string/title_activity_home" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.OptionActivity"
+            android:label="@string/title_activity_option" >
         </activity>
     </application>
 
