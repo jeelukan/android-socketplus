@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated with http://android-holo-colors.com -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="socketplus_theme" parent="android:Theme.Light">
+        <item name="android:editTextStyle">@style/EditText_Socketplus</item>
+        <item name="android:autoCompleteTextViewStyle">@style/AutoCompleteTextView_Socketplus</item>
+        <item name="android:checkboxStyle">@style/CheckBox_Socketplus</item>
+        <item name="android:radioButtonStyle">@style/RadioButton_Socketplus</item>
+        <item name="android:buttonStyle">@style/Button_Socketplus</item>
+        <item name="android:imageButtonStyle">@style/ImageButton_Socketplus</item>
+        <item name="android:spinnerStyle">@style/Spinner_Socketplus</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerDropDownItem_Socketplus</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBar_Socketplus</item>
+        <item name="android:seekBarStyle">@style/SeekBar_Socketplus</item>
+        <item name="android:ratingBarStyle">@style/RatingBar_Socketplus</item>
+        <item name="android:ratingBarStyleIndicator">@style/RatingBarBig_Socketplus</item>
+        <item name="android:ratingBarStyleSmall">@style/RatingBarSmall_Socketplus</item>
+        <item name="android:buttonStyleToggle">@style/Toggle_Socketplus</item>
+        <item name="android:listViewStyle">@style/ListView_Socketplus</item>
+        <item name="android:listViewWhiteStyle">@style/ListViewsocketplus.White</item>
+        <item name="android:spinnerItemStyle">@style/SpinnerItem_Socketplus</item>
+        <!-- <item name="android:dropDownSpinnerStyle">@style/Spinnersocketplus.DropDown</item> -->
+        <!-- 无标题栏 <item name="android:windowNoTitle">true</item> -->
+    </style>
+
+</resources>

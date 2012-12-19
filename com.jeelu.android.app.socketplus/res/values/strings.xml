@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    
+    <string name="demoText">中国Demo文字/UTF8/^%ABCD,{xyz}123#8211;987</string>
+    
     <string name="app_name">Jeelu SocketPlus.</string>
     <string name="menu_option">选项</string>
     <string name="menu_exit">退出</string>
+    <string name="menu_about">关于</string>
     <string name="title_activity_welcome">Welcome to Socket+</string>
     <string name="title_activity_socket_client">Socket Client</string>
     <string name="title_activity_home">Welcome to Socket+</string>
 
-    <drawable name="mainColor">#22FF55</drawable>
+    <drawable name="mainColor">#EEEEEE</drawable>
     <drawable name="whiteColor">#EEEEEE</drawable>
-    <drawable name="buildServerPopwinColor">#EDEDED</drawable>
 
     <string name="startServerButtonText">创建Server</string>
     <string name="startClientButtonText">创建Client</string>
@@ -18,10 +20,9 @@
     <dimen name="buildServerPopwinWidth">120dp</dimen>
     <dimen name="buildServerPopwinHeight">180dp</dimen>
 
-    <string name="demoText">中国文字^%ABCD,{xyz}123#8211;987</string>
     <string name="okTextButton">确定</string>
     <string name="cancelTextButton">取消</string>
-    <string name="buildServerDialogTitle">请输入参数：</string>
+    <string name="buildServerDialogTitle">服务器参数</string>
     <string name="buildServerDialogTitlePortLabelText">端口：</string>
     <string name="welcome">Welcome to LeftHand Toolbox.</string>
     <string name="hello_world">Hello world!</string>
