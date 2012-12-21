@@ -2,49 +2,37 @@ package com.jeelu.android.app.socketplus;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.Button;
-
-import com.jeelu.android.app.socketplus.dialogs.SocketCreatorDialog;
 
 public class HomeActivity extends Activity// RoboActivity
 {
-	// @InjectView(R.id.buildServerButton)
-	private Button _ServerBuilderButton;
-
 	@Override
 	public void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.dashboard_layout);
-//		setContentView(R.layout.activity_home);
-//
-//		final Resources resources = getResources();
-//		final Window window = getWindow();
-//		final Drawable drawable = resources.getDrawable(R.drawable.mainColor);
-//		// 设置背景色为本应用的主色调
-//		window.setBackgroundDrawable(drawable);
-//
-//		_ServerBuilderButton = (Button) findViewById(R.id.buildServerButton);
-//		// 当点击“创建Server”时
-//		_ServerBuilderButton.setOnClickListener(new OnClickListener()
-//		{
-//			public void onClick(final View v)
-//			{
-//				if (v.getId() == R.id.buildServerButton)
-//					showDialog(R.id.buildServerButton);
-//			}
-//		});
+		// setContentView(R.layout.activity_home);
+		//
+		// final Resources resources = getResources();
+		// final Window window = getWindow();
+		// final Drawable drawable = resources.getDrawable(R.drawable.mainColor);
+		// // 设置背景色为本应用的主色调
+		// window.setBackgroundDrawable(drawable);
+		//
+		// _ServerBuilderButton = (Button) findViewById(R.id.buildServerButton);
+		// // 当点击“创建Server”时
+		// _ServerBuilderButton.setOnClickListener(new OnClickListener()
+		// {
+		// public void onClick(final View v)
+		// {
+		// if (v.getId() == R.id.buildServerButton)
+		// showDialog(R.id.buildServerButton);
+		// }
+		// });
 	}
 
 	@Override
@@ -66,24 +54,24 @@ public class HomeActivity extends Activity// RoboActivity
 		Dialog dialog = null;
 		switch (id)
 		{
-			case R.id.buildServerButton:
-			case R.id.buildClientButton:
-				SocketCreatorDialog.Builder builder = new SocketCreatorDialog.Builder(this);
-				builder.setTitle(R.string.buildServerDialogTitle);
-				builder.setMessage(R.string.demoText);
-				DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener()
-				{
-					public void onClick(final DialogInterface dialog, final int which)
-					{
-						// 将此处移除后，无论怎么修改EditText内容
-						// 每次点击显示普通对话框，总是第一次的内容
-						// 如果想更新EditText内容就得加removeDialog
-						// removeDialog(SERVER_BUILDER_DIALOG);
-					}
-				};
-				builder.setPositiveButton(R.string.okTextButton, listener);
-				dialog = builder.create();
-				break;
+		// case R.id.buildServerButton:
+		// case R.id.buildClientButton:
+		// SocketCreatorDialog.Builder builder = new SocketCreatorDialog.Builder(this);
+		// builder.setTitle(R.string.buildServerDialogTitle);
+		// builder.setMessage(R.string.demoText);
+		// DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener()
+		// {
+		// public void onClick(final DialogInterface dialog, final int which)
+		// {
+		// // 将此处移除后，无论怎么修改EditText内容
+		// // 每次点击显示普通对话框，总是第一次的内容
+		// // 如果想更新EditText内容就得加removeDialog
+		// // removeDialog(SERVER_BUILDER_DIALOG);
+		// }
+		// };
+		// builder.setPositiveButton(R.string.okTextButton, listener);
+		// dialog = builder.create();
+		// break;
 			default:
 				break;
 		}

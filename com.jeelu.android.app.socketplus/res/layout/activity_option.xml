@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:key="socketplus_option_preference"
-    android:title="@string/socketplus_option_preference_title" >
+    android:key="socketplus_option_preference" >
 
     <ListPreference
-        android:defaultValue="@array/list_entries_value2"
+ 
         android:dialogTitle="dialogTitle"
-        android:entries="@array/list_entries"
-        android:entryValues="@array/list_entries_value"
+        
         android:key="myListPreference"
         android:summary="说明摘要"
         android:title="标题" >

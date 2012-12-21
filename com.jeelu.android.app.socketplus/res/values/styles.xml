@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="DialogText">
         <item name="android:textColor">#FF000000</item>
@@ -14,7 +14,7 @@
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:orientation">horizontal</item>
-        <!-- <item name="android:background">@drawable/actionbar_background</item> -->
+        <item name="android:background">@drawable/actionbar_background</item>
     </style>
 
     <style name="DashboardButton">
@@ -23,10 +23,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:drawablePadding">2dp</item>
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">#ff29549f</item>
-        <item name="android:background">@null</item>
+        <item name="android:background">#FFF</item>
     </style>
 
     <style name="FooterBar">
@@ -72,12 +71,6 @@
         <item name="android:dropDownSelector">@drawable/list_selector_holo_light</item>
     </style>
 
-    <!--
-  <style name="Spinnersocketplus.DropDown">
-      <item name="android:spinnerMode">dropdown</item>
-  </style>
-    -->
-
     <style name="SpinnerDropDownItem_Socketplus" parent="android:Widget.DropDownItem.Spinner">
         <item name="android:checkMark">@drawable/btn_radio_holo_light</item>
     </style>
@@ -87,41 +80,6 @@
         <item name="android:indeterminateDrawable">@drawable/progress_indeterminate_horizontal_holo_light</item>
         <item name="android:minHeight">16dip</item>
         <item name="android:maxHeight">16dip</item>
-    </style>
-
-    <style name="SeekBar_Socketplus" parent="android:Widget.SeekBar">
-        <item name="android:progressDrawable">@drawable/scrubber_progress_horizontal_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/scrubber_progress_horizontal_holo_light</item>
-        <item name="android:minHeight">13dip</item>
-        <item name="android:maxHeight">13dip</item>
-        <item name="android:thumb">@drawable/scrubber_control_selector_holo_light</item>
-        <item name="android:thumbOffset">16dip</item>
-        <item name="android:paddingLeft">16dip</item>
-        <item name="android:paddingRight">16dip</item>
-    </style>
-
-    <style name="RatingBar_Socketplus" parent="android:Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/ratingbar_full_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/ratingbar_full_holo_light</item>
-    </style>
-
-    <style name="RatingBarBig_Socketplus">
-        <item name="android:progressDrawable">@drawable/ratingbar_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/ratingbar_holo_light</item>
-        <item name="android:minHeight">35dip</item>
-        <item name="android:maxHeight">35dip</item>
-    </style>
-
-    <style name="RatingBarSmall_Socketplus">
-        <item name="android:progressDrawable">@drawable/ratingbar_small_holo_light</item>
-        <item name="android:indeterminateDrawable">@drawable/ratingbar_small_holo_light</item>
-        <item name="android:minHeight">16dip</item>
-        <item name="android:maxHeight">16dip</item>
-    </style>
-
-    <style name="Toggle_Socketplus" parent="android:Widget.Button.Toggle">
-        <item name="android:background">@drawable/btn_toggle_holo_light</item>
-        <item name="android:minHeight">48dip</item>
     </style>
 
     <style name="ListView_Socketplus" parent="android:Widget.ListView">

@@ -1,63 +1,50 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/homeLinear"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/mainColor"
-    android:orientation="vertical" >
-
-    <LinearLayout
-        android:id="@+id/topMainFunctionLinear"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content" >
-
-        <Button
-            android:id="@+id/buildServerButton"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:text="@string/startServerButtonText" />
-
-        <Button
-            android:id="@+id/buildClientButton"
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
-            android:layout_weight="1"
-            android:text="@string/startClientButtonText" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/datainfoLinear"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/whiteColor"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/clientDatainfoTextview"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent"
-            android:text="@string/demoText" />
-
-        <TextView
-            android:id="@+id/serverDatainfoTextview"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/demoText" />
-
-        <TextView
-            android:id="@+id/protocolSettingTextview"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/demoText" />
-
-        <TextView
-            android:id="@+id/bytesStatisticsTextview"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/demoText" />
-
-    </LinearLayout>
-
-</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<com.jeelu.android.app.socketplus.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe" >
+    <!--  News Feed Button -->
+    <Button
+        android:id="@+id/button_text_start_tcpserver"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__tcpserver"
+        android:text="@string/button_text_start_tcpserver" />
+ 
+    <!--  Friends Button -->
+    <Button
+        android:id="@+id/button_start_tcpclient"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__tcpclient"
+        android:text="@string/button_text_start_tcpclient" />
+ 
+    <!--  Messages Button -->
+    <Button
+        android:id="@+id/button_start_udpserver"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__udpserver"
+        android:text="@string/button_text_start_udpserver" />
+ 
+    <!--  Places Button -->
+    <Button
+        android:id="@+id/button_start_udpclient"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__udpclient"
+        android:text="@string/button_text_start_udpclient" />
+ 
+    <!--  Events Button -->
+    <Button
+        android:id="@+id/button_start_protocol"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__protocol"
+        android:text="@string/button_text_start_protocol" />
+ 
+    <!--  Photos Button -->
+    <Button
+        android:id="@+id/button_lefthandtoolbox"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__lefthandtoolbox"
+        android:text="@string/button_text_lefthandtoolbox" />
+ 
+</com.jeelu.android.app.socketplus.DashboardLayout>

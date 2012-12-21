@@ -8,7 +8,7 @@
         <include layout="@layout/actionbar_layout"/>
  
         <!--  Include Fragmented dashboard -->
-        <include layout="@layout/activity_home1"/>   
+        <include layout="@layout/activity_home"/>   
  
         <!--  Include Footer -->
         <include layout="@layout/footer_layout"/>
