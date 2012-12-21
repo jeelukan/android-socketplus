@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    
+
     <string name="demoText">中国Demo文字/UTF8/^%ABCD,{xyz}123#8211;987</string>
-    
     <string name="app_name">LeftHand Toolbox 1#: SocketPlus.</string>
     <string name="copyright">© Jeelu.com 2013.</string>
     <string name="menu_option">选项</string>
     <string name="menu_exit">退出</string>
     <string name="menu_about">关于</string>
-    
     <string name="welcome">Welcome to LeftHand Toolbox.</string>
     <string name="title_activity_welcome">Welcome to Socket+</string>
     <string name="title_activity_socket_client">Socket Client</string>
     <string name="title_activity_home">Welcome to Socket+</string>
-	<string name="title_activity_option"></string>
-    
+    <string name="title_activity_option"></string>
     <string name="button_text_start_tcpserver">TCPServer</string>
     <string name="button_text_start_tcpclient">TCPClient</string>
     <string name="button_text_start_udpserver">UDPServer</string>
     <string name="button_text_start_udpclient">UDPClient</string>
     <string name="button_text_start_protocol">Protocol</string>
     <string name="button_text_lefthandtoolbox">LeftHand-App</string>
-    
     <string name="button_text_confirm">确定</string>
     <string name="button_text_cancel">取消</string>
     <string name="dialog_serverbuilder_title">服务器参数</string>
     <string name="dialog_label_serverport">端口：</string>
-    
     <string name="preference_option_title">基本设置</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_tcpclient">TCPClientActivity</string>
+    <string name="title_activity_udpserver">UDPServerActivity</string>
+    <string name="title_activity_tcpserver">TCPServerActivity</string>
+    <string name="title_activity_udpclient">UDPClientActivity</string>
+    <string name="title_activity_protocol_manager">ProtocolManagerActivity</string>
+    <string name="title_activity_left_hand_toolbox">LeftHandToolboxActivity</string>
 
 </resources>

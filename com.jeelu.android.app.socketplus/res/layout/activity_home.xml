@@ -1,50 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.jeelu.android.app.socketplus.DashboardLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:layout_weight="1"
-    android:background="#f8f9fe" >
-    <!--  News Feed Button -->
-    <Button
-        android:id="@+id/button_text_start_tcpserver"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn__tcpserver"
-        android:text="@string/button_text_start_tcpserver" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fe"
+    android:orientation="vertical" >
  
-    <!--  Friends Button -->
-    <Button
-        android:id="@+id/button_start_tcpclient"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn__tcpclient"
-        android:text="@string/button_text_start_tcpclient" />
+    <include layout="@layout/layout_actionbar" />
  
-    <!--  Messages Button -->
-    <Button
-        android:id="@+id/button_start_udpserver"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn__udpserver"
-        android:text="@string/button_text_start_udpserver" />
+    <include layout="@layout/layout_dashboard_home" />
+    
+    <include layout="@layout/layout_footer"/>
  
-    <!--  Places Button -->
-    <Button
-        android:id="@+id/button_start_udpclient"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn__udpclient"
-        android:text="@string/button_text_start_udpclient" />
- 
-    <!--  Events Button -->
-    <Button
-        android:id="@+id/button_start_protocol"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn__protocol"
-        android:text="@string/button_text_start_protocol" />
- 
-    <!--  Photos Button -->
-    <Button
-        android:id="@+id/button_lefthandtoolbox"
-        style="@style/DashboardButton"
-        android:drawableTop="@drawable/btn__lefthandtoolbox"
-        android:text="@string/button_text_lefthandtoolbox" />
- 
-</com.jeelu.android.app.socketplus.DashboardLayout>
+</LinearLayout>

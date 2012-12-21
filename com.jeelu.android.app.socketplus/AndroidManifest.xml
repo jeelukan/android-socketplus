@@ -9,8 +9,8 @@
         android:targetSdkVersion="15" />
 
     <application
+        android:name="com.jeelu.android.app.socketplus.common.GuiceApplication"
         android:allowBackup="true"
-        android:name="GuiceApplication"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/socketplus_theme" >
@@ -23,24 +23,36 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jeelu.android.app.socketplus.SocketClientActivity"
-            android:label="@string/title_activity_socket_client" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="com.jeelu.android.app.socketplus.HomeActivity"
             android:label="@string/title_activity_home" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.jeelu.android.app.socketplus.OptionActivity"
             android:label="@string/title_activity_option" >
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.TCPClientActivity"
+            android:label="@string/title_activity_tcpclient" >
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.UDPServerActivity"
+            android:label="@string/title_activity_udpserver" >
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.TCPServerActivity"
+            android:label="@string/title_activity_tcpserver" >
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.UDPClientActivity"
+            android:label="@string/title_activity_udpclient" >
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.ProtocolManagerActivity"
+            android:label="@string/title_activity_protocol_manager" >
+        </activity>
+        <activity
+            android:name="com.jeelu.android.app.socketplus.LeftHandToolboxActivity"
+            android:label="@string/title_activity_left_hand_toolbox" >
         </activity>
     </application>
 

@@ -1,8 +1,8 @@
-package com.jeelu.android.app.socketplus;
+package com.jeelu.android.app.socketplus.common;
 
 import com.google.inject.AbstractModule;
 
-public class MyModule extends AbstractModule
+public class GuiceModule extends AbstractModule
 {
 
 	@Override

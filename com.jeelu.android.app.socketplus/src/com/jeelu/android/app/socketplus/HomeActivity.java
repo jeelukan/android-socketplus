@@ -2,11 +2,14 @@ package com.jeelu.android.app.socketplus;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.widget.Button;
 
 public class HomeActivity extends Activity// RoboActivity
 {
@@ -14,25 +17,68 @@ public class HomeActivity extends Activity// RoboActivity
 	public void onCreate(final Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.dashboard_layout);
-		// setContentView(R.layout.activity_home);
-		//
-		// final Resources resources = getResources();
-		// final Window window = getWindow();
-		// final Drawable drawable = resources.getDrawable(R.drawable.mainColor);
-		// // 设置背景色为本应用的主色调
-		// window.setBackgroundDrawable(drawable);
-		//
-		// _ServerBuilderButton = (Button) findViewById(R.id.buildServerButton);
-		// // 当点击“创建Server”时
-		// _ServerBuilderButton.setOnClickListener(new OnClickListener()
-		// {
-		// public void onClick(final View v)
-		// {
-		// if (v.getId() == R.id.buildServerButton)
-		// showDialog(R.id.buildServerButton);
-		// }
-		// });
+		setContentView(R.layout.activity_home);
+
+		Button button_start_tcpserver = (Button) findViewById(R.id.button_start_tcpserver);
+		Button button_start_tcpclient = (Button) findViewById(R.id.button_start_tcpclient);
+		Button button_start_udpserver = (Button) findViewById(R.id.button_start_udpserver);
+		Button button_start_udpclient = (Button) findViewById(R.id.button_start_udpclient);
+		Button button_manager_protocol = (Button) findViewById(R.id.button_manager_protocol);
+		Button button_lefthandtoolbox = (Button) findViewById(R.id.button_lefthandtoolbox);
+
+		button_start_tcpserver.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(final View view)
+			{
+				Intent i = new Intent(getApplicationContext(), TCPServerActivity.class);
+				startActivity(i);
+			}
+		});
+
+		button_start_tcpclient.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(final View view)
+			{
+				Intent i = new Intent(getApplicationContext(), TCPClientActivity.class);
+				startActivity(i);
+			}
+		});
+
+		button_start_udpserver.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(final View view)
+			{
+				Intent i = new Intent(getApplicationContext(), UDPServerActivity.class);
+				startActivity(i);
+			}
+		});
+
+		button_start_udpclient.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(final View view)
+			{
+				Intent i = new Intent(getApplicationContext(), UDPClientActivity.class);
+				startActivity(i);
+			}
+		});
+
+		button_manager_protocol.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(final View view)
+			{
+				Intent i = new Intent(getApplicationContext(), ProtocolManagerActivity.class);
+				startActivity(i);
+			}
+		});
+
+		button_lefthandtoolbox.setOnClickListener(new View.OnClickListener()
+		{
+			public void onClick(final View view)
+			{
+				Intent i = new Intent(getApplicationContext(), LeftHandToolboxActivity.class);
+				startActivity(i);
+			}
+		});
 	}
 
 	@Override

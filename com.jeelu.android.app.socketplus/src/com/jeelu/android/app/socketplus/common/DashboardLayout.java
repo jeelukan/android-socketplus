@@ -1,4 +1,4 @@
-package com.jeelu.android.app.socketplus;
+package com.jeelu.android.app.socketplus.common;
 
 /*
  * Copyright 2011 Google Inc.

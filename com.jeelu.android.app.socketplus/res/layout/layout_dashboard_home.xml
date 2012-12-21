@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jeelu.android.app.socketplus.common.DashboardLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:background="#f8f9fe" >
+    <Button
+        android:id="@+id/button_start_tcpserver"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__tcpserver"
+        android:text="@string/button_text_start_tcpserver" />
+    <Button
+        android:id="@+id/button_start_tcpclient"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__tcpclient"
+        android:text="@string/button_text_start_tcpclient" />
+    <Button
+        android:id="@+id/button_start_udpserver"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__udpserver"
+        android:text="@string/button_text_start_udpserver" />
+    <Button
+        android:id="@+id/button_start_udpclient"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__udpclient"
+        android:text="@string/button_text_start_udpclient" />
+    <Button
+        android:id="@+id/button_manager_protocol"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__protocol"
+        android:text="@string/button_text_start_protocol" />
+    <Button
+        android:id="@+id/button_lefthandtoolbox"
+        style="@style/DashboardButton"
+        android:drawableTop="@drawable/btn__lefthandtoolbox"
+        android:text="@string/button_text_lefthandtoolbox" />
+ 
+</com.jeelu.android.app.socketplus.common.DashboardLayout>
