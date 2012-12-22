@@ -82,15 +82,23 @@ public class SocketBusiness
 	private void processSocketSend(final SocketAction socketAction) throws SocketUninitializedException, UnsupportedEncodingException, SocketUnconnectedException, IOException
 	{
 		boolean breakAfterSend = socketAction.getDisconnectAfterAction();
-		//if (socketAction.getDataToSend() instanceof String)
-		//{
-			_Client.Send(socketAction.getDataToSend(), breakAfterSend);
-		//}
+		// if (socketAction.getDataToSend() instanceof String)
+		// {
+		_Client.Send(socketAction.getDataToSend(), breakAfterSend);
+		// }
 	}
 
+	/**
+	 * 处理接收动作
+	 * 
+	 * @param socketAction
+	 * @throws SocketUninitializedException
+	 * @throws SocketUnconnectedException
+	 * @throws IOException
+	 */
 	private void processSocketReceive(final SocketAction socketAction) throws SocketUninitializedException, SocketUnconnectedException, IOException
 	{
 		boolean breakAfterSend = socketAction.getDisconnectAfterAction();
-		_Client.Receive(socketAction.getDataReceived(),breakAfterSend);
+		_Client.Receive(socketAction.getDataReceived(), breakAfterSend);
 	}
 }
