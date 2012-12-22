@@ -7,6 +7,7 @@
     <uses-sdk
         android:minSdkVersion="10"
         android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name="com.jeelu.android.app.socketplus.common.GuiceApplication"
@@ -25,10 +26,6 @@
         <activity
             android:name="com.jeelu.android.app.socketplus.HomeActivity"
             android:label="@string/title_activity_home" >
-        </activity>
-        <activity
-            android:name="com.jeelu.android.app.socketplus.OptionActivity"
-            android:label="@string/title_activity_option" >
         </activity>
         <activity
             android:name="com.jeelu.android.app.socketplus.TCPClientActivity"

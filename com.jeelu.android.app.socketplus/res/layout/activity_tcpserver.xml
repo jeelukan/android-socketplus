@@ -11,22 +11,81 @@
 
     <!-- layout_weight="1",使得这个子布局填充满中间区域 -->
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
         android:layout_weight="1" >
+
+        <RelativeLayout
+            android:id="@+id/linear_server_info"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp" >
+
+            <ImageView
+                android:id="@+id/imageview_serverinfo_logo"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:background="#aaeeaa" />
+
+            <ImageView
+                android:id="@+id/imageview_serverinfo_connectioned"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/imageview_serverinfo_data_recevied"
+                android:background="#aee23a" />
+
+            <ImageView
+                android:id="@+id/imageview_serverinfo_data_recevied"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="#aaeeaa" />
+
+            <TextView
+                android:id="@+id/imageview_serverinfo_ipport"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/textview_serverinfo_ipaddress"
+                android:background="#cfc041"
+                android:text="9548" />
+
+            <TextView
+                android:id="@+id/textview_serverinfo_ipaddress"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imageview_serverinfo_logo"
+                android:background="#00aaee"
+                android:text="192.168.255.98" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_clientByListen_iplist"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/linear_server_info"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical" >
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textview_tcpserver_logpanel"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linear_clientByListen_iplist"
             android:layout_margin="5dp"
             android:background="@drawable/textview_corners"
             android:padding="5dp"
             android:text="@string/demoText"
             android:textColor="#22ff00"
             android:textSize="13sp" />
-    </LinearLayout>
+    </RelativeLayout>
 
     <include layout="@layout/layout_footer" />
 

@@ -24,8 +24,8 @@ public class WelcomeActivity extends Activity
 
 		// 定义一个4秒钟的渐变动画,显示4秒钟后自动消失
 		ImageView img = (ImageView) findViewById(R.id.imageView_welcome_background);
-		AlphaAnimation animation = new AlphaAnimation(0.4f, 1.0f);
-		animation.setDuration(3000);
+		AlphaAnimation animation = new AlphaAnimation(0.2f, 1.0f);
+		animation.setDuration(1200);
 		img.startAnimation(animation);// 开始播放动画
 		animation.setAnimationListener(new AnimationListener()
 		{
