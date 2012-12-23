@@ -4,6 +4,7 @@
     <string name="demoText">中国Demo文字/UTF8/^%ABCD,{xyz}123#8211;987</string>
     <string name="app_name">LeftHand Toolbox 1#: Socket+</string>
     <string name="copyright">© Jeelu.com 2013.</string>
+    <string name="imagetext">Socket+</string>
     <string name="menu_option">选项</string>
     <string name="menu_exit">退出</string>
     <string name="menu_about">关于</string>

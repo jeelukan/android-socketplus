@@ -10,11 +10,14 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 
+import com.jeelu.android.ui.DashboardLayout;
+
 public class WelcomeActivity extends Activity
 {
 	@Override
 	public void onCreate(final Bundle savedInstanceState)
 	{
+		System.out.println(DashboardLayout.class.getName());
 		// 欢迎页。设置为全屏显示。
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);

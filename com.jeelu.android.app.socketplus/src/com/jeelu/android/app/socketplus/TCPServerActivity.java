@@ -1,9 +1,5 @@
 package com.jeelu.android.app.socketplus;
 
-import java.net.InetAddress;
-import java.net.NetworkInterface;
-import java.net.SocketException;
-import java.util.Enumeration;
 import java.util.UUID;
 
 import android.app.Activity;
@@ -14,6 +10,8 @@ import android.util.Log;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.jeelu.android.Net.NetUtil;
 
 public class TCPServerActivity extends Activity
 {
@@ -35,17 +33,18 @@ public class TCPServerActivity extends Activity
 
 		try
 		{
-			_ServerIpTextView.setText(getLocalIpAddress());
+			_ServerIpTextView.setText(NetUtil.getLocalIpAddress());
 		}
-		catch (Exception e1)
+		catch (Exception e)
 		{
-			// TODO 自动生成的 catch 块
-			e1.printStackTrace();
+			Log.w("myapp", e);
+			_ServerIpTextView.setText("127.0.0.1");
 		}
 
 		for (int i = 0; i < 3; i++)
 		{
 			CheckBox checkBox = new CheckBox(this);
+			checkBox.setTextSize(11);
 			checkBox.setText("192.168.255." + i);
 			_ClientByListenListView.addView(checkBox);
 		}
@@ -87,34 +86,6 @@ public class TCPServerActivity extends Activity
 		_MockThread = new Thread(mock);
 		_MockThread.start();
 	}
-
-	public String getLocalIpAddress()
-	{
-		String ipaddress = "";
-
-		try
-		{
-			for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements();)
-			{
-				NetworkInterface intf = en.nextElement();
-				for (Enumeration<InetAddress> enumIpAddr = intf.getInetAddresses(); enumIpAddr.hasMoreElements();)
-				{
-					InetAddress inetAddress = enumIpAddr.nextElement();
-					if (!inetAddress.isLoopbackAddress())
-					{
-						ipaddress = inetAddress.getHostAddress();
-					}
-				}
-			}
-		}
-		catch (SocketException ex)
-		{
-			Log.e("WifiPreference IpAddress", ex.toString());
-		}
-		return ipaddress;
-	}
-
-	private static final String[] GENRES = new String[] { "Action", "Adventure", "Animation", "Children", "Comedy", "Documentary", "Drama", "Foreign", "History", "Independent", "Romance", "Sci-Fi", "Television", "Thriller" };
 
 	@Override
 	protected void onStop()
