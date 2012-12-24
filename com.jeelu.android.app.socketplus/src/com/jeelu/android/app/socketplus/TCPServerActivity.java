@@ -1,25 +1,25 @@
 package com.jeelu.android.app.socketplus;
 
-import java.util.UUID;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.jeelu.android.Net.AblySocketServer;
 import com.jeelu.android.Net.NetUtil;
 
 public class TCPServerActivity extends Activity
 {
+	AblySocketServer _SocketServer;
+
 	TextView _LogView;
 	LinearLayout _ClientByListenListView;
 	TextView _ServerIpTextView;
-	Thread _MockThread;
-	boolean _IsMock = false;
+
+	Thread _Thread;
 
 	@Override
 	protected void onCreate(final Bundle savedInstanceState)
@@ -41,14 +41,6 @@ public class TCPServerActivity extends Activity
 			_ServerIpTextView.setText("127.0.0.1");
 		}
 
-		for (int i = 0; i < 3; i++)
-		{
-			CheckBox checkBox = new CheckBox(this);
-			checkBox.setTextSize(11);
-			checkBox.setText("192.168.255." + i);
-			_ClientByListenListView.addView(checkBox);
-		}
-
 		final Handler handler = new Handler()
 		{
 			@Override
@@ -57,50 +49,36 @@ public class TCPServerActivity extends Activity
 				_LogView.setText((String) msg.obj);
 			}
 		};
+		creatSocketServer(handler);
+	}
 
-		Runnable mock = new Runnable()// 更新UI的模拟数据线程
+	private void creatSocketServer(final Handler handler)
+	{
+		Runnable runnable = new Runnable()
 		{
 			public void run()
 			{
-				_IsMock = true;
-				while (_IsMock)
+				_SocketServer = new AblySocketServer();
+				try
 				{
-					String c = UUID.randomUUID().toString();
-					String msg = new StringBuffer().append(c).append(_LogView.getText()).toString();
-					Message message = Message.obtain();
-					message.obj = msg;
-					// 通过Handler发布传送消息，handler
-					handler.sendMessage(message);
-					try
-					{
-						Thread.sleep(350);
-					}
-					catch (InterruptedException e)
-					{
-						_IsMock = false;
-						Thread.currentThread().interrupt();
-					}
+					_SocketServer.startServer(handler);
+				}
+				catch (Exception e)
+				{
+					Log.e("Socket", e.getMessage());
 				}
 			}
 		};
-		_MockThread = new Thread(mock);
-		_MockThread.start();
+		_Thread = new Thread(runnable);
+		_Thread.setName("AblySocketServer");
+		_Thread.start();
 	}
 
 	@Override
 	protected void onStop()
 	{
-		if (_MockThread != null)
-		{
-			try
-			{
-				_IsMock = false;
-			}
-			catch (Exception e)
-			{
-				Log.w("myapp", e.getMessage());
-			}
-		}
+		_SocketServer.stopServer();
+		_Thread.stop();
 		super.onStop();
 	}
 }

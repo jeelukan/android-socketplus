@@ -19,6 +19,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
+import com.jeelu.android.Exceptions.NullParamException;
+
 /**
  * 新建基于NIO的SocketServer，供Android项目使用。
  * 
@@ -27,11 +29,13 @@ import android.util.Log;
  */
 public class AblySocketServer
 {
-	public Selector _Selector = null;
-	public ServerSocketChannel _Server = null;
-	public SocketChannel _SocketChannel = null;
-	public int _Port = 9000;
-	String _Result = null;
+	protected Selector _Selector = null;
+	protected ServerSocketChannel _Server = null;
+	protected SocketChannel _SocketChannel = null;
+	protected int _Port = 9000;
+	protected String _Result = null;
+
+	protected Handler _Handler;
 
 	public AblySocketServer()
 	{
@@ -53,8 +57,14 @@ public class AblySocketServer
 		Log.i("Socket", "AblySocketServer initialized...");
 	}
 
-	public void startServer(final Handler handler) throws IOException
+	public void startServer(final Handler handler) throws IOException, NullParamException
 	{
+		if (handler == null)
+		{
+			throw new NullParamException();
+		}
+		_Handler = handler;
+
 		initializeOperations();
 		SelectionKey acceptKey = _Server.register(_Selector, SelectionKey.OP_ACCEPT);
 
@@ -70,7 +80,7 @@ public class AblySocketServer
 
 				if (key.isAcceptable())
 				{
-					System.out.println("Key is Acceptable");
+					Log.d("Socket", "Key is Acceptable");
 					ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
 					_SocketChannel = ssc.accept();
 					_SocketChannel.configureBlocking(false);
@@ -97,6 +107,21 @@ public class AblySocketServer
 						replyMessage(_SocketChannel, ret);
 					}
 				}
+			}
+		}
+	}
+
+	public void stopServer()
+	{
+		if (_Server.isRegistered())
+		{
+			try
+			{
+				_Server.close();
+			}
+			catch (IOException e)
+			{
+				Log.e("Socket", e.getMessage());
 			}
 		}
 	}
