@@ -1,4 +1,4 @@
-package com.jeelu.android.ui;
+package com.jeelu.android.common.ui;
 
 /*
  * Copyright 2011 Google Inc.

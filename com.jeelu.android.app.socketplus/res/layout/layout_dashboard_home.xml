@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.jeelu.android.ui.DashboardLayout
+<com.jeelu.android.common.ui.DashboardLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -36,4 +36,4 @@
         android:drawableTop="@drawable/btn__lefthandtoolbox"
         android:text="@string/button_text_lefthandtoolbox" />
  
-</com.jeelu.android.ui.DashboardLayout>
+</com.jeelu.android.common.ui.DashboardLayout>

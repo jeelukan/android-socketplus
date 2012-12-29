@@ -14,8 +14,11 @@ import android.os.Message;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.jeelu.android.Net.NetUtil;
+import com.jeelu.android.common.Util;
+import com.jeelu.android.common.ui.SlipSwitch;
+import com.jeelu.android.common.ui.SlipSwitch.OnSwitchListener;
 
 public class TCPServerActivity extends Activity
 {
@@ -39,14 +42,40 @@ public class TCPServerActivity extends Activity
 
 		try
 		{
-			_ServerIpTextView.setText(NetUtil.getLocalIpAddress());
+			_ServerIpTextView.setText(Util.getLocalIpAddress());
 		}
 		catch (Exception e)
 		{
 			Log.w("app", e);
 			_ServerIpTextView.setText("127.0.0.1");
 		}
+
+		switchbutton();
+
 		creatSocketServer(new TcpServerUIHandler());
+	}
+
+	SlipSwitch _SlipSwitch;
+
+	private void switchbutton()
+	{
+		_SlipSwitch = (SlipSwitch) findViewById(R.id.slipswitch_pause_server);
+		_SlipSwitch.setImageResource(R.drawable.slipswitch_on, R.drawable.slipswitch_off, R.drawable.slipswitch_button);
+		_SlipSwitch.setSwitchState(true);
+		_SlipSwitch.setOnSwitchListener(new OnSwitchListener()
+		{
+			public void onSwitched(final boolean isSwitchOn)
+			{
+				if (isSwitchOn)
+				{
+					Toast.makeText(TCPServerActivity.this, "开关已经开启", 300).show();
+				}
+				else
+				{
+					Toast.makeText(TCPServerActivity.this, "开关已经关闭", 300).show();
+				}
+			}
+		});
 	}
 
 	private void creatSocketServer(final Handler uiHandler)

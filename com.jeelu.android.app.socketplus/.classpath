@@ -4,8 +4,6 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.jeelu.android"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.jeelu.android.ui"/>
 	<classpathentry kind="lib" path="libs/xSocket-2.8.15.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

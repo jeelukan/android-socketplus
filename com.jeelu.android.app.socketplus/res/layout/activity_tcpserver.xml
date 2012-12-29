@@ -80,11 +80,18 @@
         <LinearLayout
             android:id="@+id/linear_clientByListen_iplist"
             android:layout_width="match_parent"
-            android:layout_height="23dp"
+            android:layout_height="28dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
             android:orientation="horizontal" >
+            
+            <com.jeelu.android.common.ui.SlipSwitch
+                android:id="@+id/slipswitch_pause_server"
+                android:layout_width="match_parent"
+    			android:layout_height="fill_parent">
+                
+            </com.jeelu.android.common.ui.SlipSwitch>
 
         </LinearLayout>
 

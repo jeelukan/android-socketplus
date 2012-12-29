@@ -10,7 +10,7 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 
-import com.jeelu.android.ui.DashboardLayout;
+import com.jeelu.android.common.ui.DashboardLayout;
 
 public class WelcomeActivity extends Activity
 {
