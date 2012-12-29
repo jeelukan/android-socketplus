@@ -8,10 +8,12 @@ import org.xsocket.connection.Server;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,6 +29,9 @@ public class TCPServerActivity extends Activity
 	TextView _LogPanel;
 	LinearLayout _ClientByListenListView;
 	TextView _ServerIpTextView;
+	ImageView _CommLedImageView;
+	ImageView _ConnLedImageView;
+	AnimationDrawable _LedBackgroundAnimationDrawable;
 
 	Thread _Thread;
 
@@ -38,6 +43,11 @@ public class TCPServerActivity extends Activity
 
 		_LogPanel = (TextView) findViewById(R.id.textview_tcpserver_logpanel);
 		_ClientByListenListView = (LinearLayout) findViewById(R.id.linear_clientByListen_iplist);
+		_CommLedImageView = (ImageView) findViewById(R.id.imageview_serverinfo_data_recevied);
+		_ConnLedImageView = (ImageView) findViewById(R.id.imageview_serverinfo_connectioned);
+		_ConnLedImageView.setBackgroundResource(R.anim.led_background);
+		_LedBackgroundAnimationDrawable = (AnimationDrawable) _ConnLedImageView.getBackground();
+		_LedBackgroundAnimationDrawable.setOneShot(true);
 		_ServerIpTextView = (TextView) findViewById(R.id.textview_serverinfo_ipaddress);
 
 		try
@@ -67,13 +77,9 @@ public class TCPServerActivity extends Activity
 			public void onSwitched(final boolean isSwitchOn)
 			{
 				if (isSwitchOn)
-				{
 					Toast.makeText(TCPServerActivity.this, "开关已经开启", 300).show();
-				}
 				else
-				{
 					Toast.makeText(TCPServerActivity.this, "开关已经关闭", 300).show();
-				}
 			}
 		});
 	}
@@ -129,6 +135,7 @@ public class TCPServerActivity extends Activity
 					buffer.insert(0, "\n");
 					buffer.insert(0, format.format(now));
 					_LogPanel.setText(buffer.toString());
+					_LedBackgroundAnimationDrawable.start();
 					break;
 				case 1:
 				case 2:

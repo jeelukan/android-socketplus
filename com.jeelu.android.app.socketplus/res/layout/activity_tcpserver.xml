@@ -44,7 +44,7 @@
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
                 android:layout_toLeftOf="@+id/imageview_serverinfo_data_recevied"
-                android:background="@drawable/led_green" />
+                android:background="@drawable/led_gray" />
 
             <ImageView
                 android:contentDescription="@string/imagetext"
@@ -52,7 +52,7 @@
                 android:layout_width="25dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:background="@drawable/led_red" />
+                android:background="@drawable/led_gray" />
 
             <TextView
                 android:id="@+id/imageview_serverinfo_ipport"
