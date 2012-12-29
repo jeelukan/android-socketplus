@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="socketplus_option_preference" >
+
+    <ListPreference
+ 
+        android:dialogTitle="dialogTitle"
+        
+        android:key="myListPreference"
+        android:summary="说明摘要"
+        android:title="标题" >
+    </ListPreference>
+
+    <PreferenceCategory android:title="PreferenceCategory 1" >
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="CheckBox1"
+            android:summaryOff="某功能: 关闭"
+            android:summaryOn="某功能: 开启"
+            android:title="CheckBox" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="PreferenceCategory 2" >
+
+        <PreferenceScreen android:title="二级PreferenceScreen" >
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:key="CheckBox2"
+                android:summaryOff="某功能: 关闭"
+                android:summaryOn="某功能: 开启"
+                android:title="CheckBox" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="PreferenceCategory 3" >
+
+        <EditTextPreference
+            android:dialogTitle="输入设置"
+            android:key="EditTextPreference"
+            android:summary="点击输入"
+            android:title="EditTextPreference" />
+
+        <RingtonePreference
+            android:key="RingtonePreference"
+            android:summary="选择铃声"
+            android:title="RingtonePreference" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
