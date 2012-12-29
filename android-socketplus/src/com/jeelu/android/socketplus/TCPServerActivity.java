@@ -47,7 +47,7 @@ public class TCPServerActivity extends Activity
 		_ConnLedImageView = (ImageView) findViewById(R.id.imageview_serverinfo_connectioned);
 		_ConnLedImageView.setBackgroundResource(R.anim.led_background);
 		_LedBackgroundAnimationDrawable = (AnimationDrawable) _ConnLedImageView.getBackground();
-		_LedBackgroundAnimationDrawable.setOneShot(true);
+		_LedBackgroundAnimationDrawable.setOneShot(false);
 		_ServerIpTextView = (TextView) findViewById(R.id.textview_serverinfo_ipaddress);
 
 		try
@@ -117,12 +117,15 @@ public class TCPServerActivity extends Activity
 		super.onStop();
 	}
 
+	boolean _IsOpenByCommLed = false;
+
 	@SuppressLint("HandlerLeak")
 	class TcpServerUIHandler extends Handler
 	{
 		@Override
 		public void handleMessage(final Message msg)
 		{
+
 			super.handleMessage(msg);
 			switch (msg.what)
 			{
@@ -136,7 +139,11 @@ public class TCPServerActivity extends Activity
 					buffer.insert(0, "\n");
 					buffer.insert(0, format.format(now));
 					_LogPanel.setText(buffer.toString());
-					_LedBackgroundAnimationDrawable.start();
+					if (!_IsOpenByCommLed)
+					{
+						_LedBackgroundAnimationDrawable.start();
+						_IsOpenByCommLed = true;
+					}
 					break;
 				case 1:
 				case 2:
